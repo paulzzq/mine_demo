@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!--    path :代表设置的目录下一级目录 eg：<external-path path="images/"
+                整个目录为Environment.getExternalStorageDirectory()+"/images/"
+            name: 代表定义在Content中的字段 eg：name = "myimages" ，并且请求的内容的文件名为default_image.jpg
+                则 返回一个URI   content://com.example.myapp.fileprovider/myimages/default_image.jpg -->
+    <!--下载apk-->
+    <external-path
+        name="sdcard_files"
+        path="" />
+    <!--相机相册裁剪-->
+    <external-files-path
+        name="data_file"
+        path="" />
+    <external-cache-path
+        name="external_caches"
+        path="" />
+    <files-path
+        name="camera_no_sdcard"
+        path="" />
+    <root-path
+        name="camera_photos"
+        path="" />
+
+</paths>

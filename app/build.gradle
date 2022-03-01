@@ -1,0 +1,160 @@
+import java.text.SimpleDateFormat
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+
+
+def TimeStamp = releaseTime();
+
+//def releaseTime() {
+////    return Long.toHexString(Long.parseLong(new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()))).toUpperCase();
+//    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+//}
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.zzq.paul_tools"
+        minSdkVersion 24
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        flavorDimensions "versionCode"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            android.applicationVariants.all {
+                variant ->
+                    variant.outputs.all {
+                        //这里修改apk文件名
+                        outputFileName = "tools_V${defaultConfig.versionName}_${buildType.name}_${releaseTime()}.apk"
+                    }
+            }
+//            buildConfigField("String", "BASE_URL", "\"https://www.apiopen.top/\"")
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            android.applicationVariants.all {
+                variant ->
+                    variant.outputs.all {
+                        //这里修改apk文件名
+                        outputFileName = "tools_V${defaultConfig.versionName}_${buildType.name}_${releaseTime()}.apk"
+                    }
+            }
+//            buildConfigField("String", "BASE_URL", "\"https://www.apiopen.top/\"")
+        }
+
+
+    }
+
+    productFlavors {
+        app1 {
+            manifestPlaceholders = [str: "releaseStr", package_name: "com.zzq.paul_tools1"]
+            applicationId "com.zzq.paul_tools1"
+            resValue "string", "app_name", "paul_tool"
+            resValue "bool", "isrRank", 'true'
+            manifestPlaceholders = [ENVIRONMENT : "app1",
+                                    app_icon    : "@mipmap/ic_launcher",
+                                    provide_name: "com.zzq.paul_tools1"]
+        }
+
+        app2 {
+            manifestPlaceholders = [str: "releaseStr", package_name: "com.zzq.paul_tools2"]
+            applicationId "com.zzq.paul_tools2"
+            resValue "string", "app_name", "测试2"
+            resValue "bool", "isrRank", 'true'
+            manifestPlaceholders = [ENVIRONMENT : "app2",
+                                    app_icon    : "@mipmap/ic_launcher",
+                                    provide_name: "com.zzq.paul_tools2"]
+        }
+    }
+
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
+}
+
+static def releaseTime() {
+    return new Date().format("yyyyMMdd", TimeZone.getTimeZone("UTC"))
+}
+
+configurations.all {
+    resolutionStrategy.force 'com.android.support:support-annotations:27.1.1'
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    implementation 'com.android.support:support-v4:26.1.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:design:28.+'
+    implementation 'com.android.support:support-v4:28.0.0'
+
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    //    //rxJava
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    implementation 'io.reactivex.rxjava2:rxjava:2.x.y'
+    //    //网络请求
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    //    //数据解析转换
+    implementation 'com.squareup.retrofit2:converter-gson:2.2.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+
+    //解决内存泄漏
+    implementation 'com.trello.rxlifecycle2:rxlifecycle-components:2.1.0'
+    implementation 'com.trello.rxlifecycle2:rxlifecycle-navi:2.1.0'
+    //事件bus
+    implementation 'com.jakewharton:butterknife:9.0.0-rc2'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0-rc2'
+
+    implementation 'com.google.code.gson:gson:2.6.2'
+
+    implementation(name: 'ecgwavelibrary-release', ext: 'aar')
+
+    //图片加载
+//    implementation 'com.github.bumptech.glide:glide:4.6.1'
+//    annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
+
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+
+
+    //事件总线
+    implementation 'org.simple:androideventbus:1.0.5.1'
+    implementation 'com.github.LinweiJ:ViewPagerIndicator:0.1.0'
+    implementation 'com.just.agentweb:agentweb:4.0.3-beta'
+
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.3'
+
+//    implementation 'com.oynix.xrecyclerview:xrecyclerview:1.0.0'
+//    implementation 'com.github.Gennki:QRichText:v1.0.3'
+    implementation 'com.idisfkj.enchancerecyclerview:mylibrary:1.1.1'
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    //WebView加载插件
+    implementation 'com.just.agentweb:agentweb:4.0.3-beta'
+
+}

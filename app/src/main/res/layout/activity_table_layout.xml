@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/select_tv"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:background="@color/divider_7d"
+        android:gravity="center"
+        android:textColor="@color/white" />
+
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_toRightOf="@+id/select_tv"
+        app:tabBackground="@color/white"
+        app:tabIndicatorHeight="0dip"
+        app:tabMinWidth="40dip"
+        app:tabMode="scrollable"
+        app:tabPaddingEnd="5dip"
+        app:tabPaddingStart="5dip"
+        app:tabTextAppearance="@style/tab_head" />
+    <!-- app:tabSelectedTextColor="@color/app_item_normal"-->
+    <!--app:tabTextColor="@color/app_item_normal"-->
+    <!--app:tabIndicatorColor="@color/app_item_normal"-->
+</RelativeLayout>

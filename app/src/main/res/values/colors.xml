@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+
+    <color name="gray_b2b2b2">#b2b2b2</color>
+    <color name="gray_d4d4d4">#d4d4d4</color>
+    <color name="gray_e3e3e3">#e3e3e3</color>
+    <color name="gray_e5e5e5">#e5e5e5</color>
+    <color name="C9">#dcdcdc</color>
+    <!-- 透明 -->
+    <color name="transparent">#00000000</color>
+    <color name="main_bg">#E92D32</color>
+    <color name="main_check_bg">#E92D32</color>
+    <color name="main_normal_bg">#F97F7C</color>
+    <color name="white">#FFFFFF</color>
+    <color name="text_gray">#888688</color>
+    <color name="view_bg">#D8D8D8</color>
+    <color name="text_blue">#2AB5FE</color>
+    <color name="app_item_pressed">#ff7c131b</color>
+    <color name="app_btn_pressed">#7c131b</color>
+    <color name="app_item_normal">#FF2B36</color>
+    <color name="title_right_text">#6e6e6e</color>
+    <color name="title_bg">#0590d8</color>
+    <color name="slidint_tab_color_select">#0590d8</color>
+    <color name="slidint_tab_color_normal">#aaaaaa</color>
+    <color name="text_about">#888688</color>
+    <color name="book_second">#666666</color>
+    <color name="divider_7d">#7d7d7d</color>
+    <color name="divider_d7">#d7d7d7</color>
+    <color name="btn_bg_touch">#999999</color>
+    <color name="regist_bg">#F0E2E2</color>
+    <color name="regist_check_bg">#e0C29EA1</color>
+    <color name="tranpant_regist_check_bg">#e0EDE2E2</color>
+    <color name="black">#000000</color>
+    <color name="red">#E80000</color>
+    <color name="regist_txt">#D7D7D7</color>
+    <color name="oe_main_subtitle">#c1c1c1</color>
+    <!-- 半透明  颜色 -->
+    <color name="perfect_transparent">#00000000</color>
+    <color name="navigate_line">#63CBD5</color>
+    <!-- 血压历史数据展示  导航线条 之 颜色 -->
+    <color name="lower_presssure">#53D2DB</color>
+    <!-- 血压历史 较低数据展示  导航线条 之 颜色 -->
+    <color name="normal_presssure">#3ABB69</color>
+    <!-- 血压历史 正常数据展示  导航线条 之 颜色 -->
+    <color name="greater_presssure">#FF6B6B</color>
+    <!-- 血压历史 较高数据展示  导航线条 之 颜色 -->
+    <color name="history_divider_line">#999999</color>
+
+    <!-- 新版UI颜色 -->
+    <color name="history_color_title">#333333</color>
+    <color name="history_color_time">#6e6e6e</color>
+    <color name="history_color_titleleft">#3e3e3e</color>
+    <color name="history_color_green">#26bf7f</color>
+    <color name="history_color_red">#ec6565</color>
+    <color name="history_color_bg">#f3f3f3</color>
+    <color name="history_color_bg2">#ffffff</color>
+    <color name="gray">#E5E5E5</color>
+    <color name="dimgray">#696969</color>
+    <color name="grgray">#BBB6B6</color>
+    <color name="seekbar_bg_color">#FCA404</color>
+    <color name="color_bule">#2F9BFF</color>
+    <color name="color_bule2">#40B3F0</color>
+    <color name="color_bule3">#99ddff</color>
+    <color name="app_color">#FF2B36</color>
+    <color name="app_color_yellow">#fff79d13</color>
+    <color name="app_color_yellow_pressed">#ffd48814</color>
+    <color name="ecg_dialog_fent_color">#ffff0000</color>
+    <color name="ecg_dialog_segarate_symbols_color">#ff707070</color>
+    <color name="vpi__background_holo_dark">#ff000000</color>
+    <color name="vpi__background_holo_light">#21709E</color>
+    <color name="ads__background_holo_light">#6621709E</color>
+    <color name="vpi__bright_foreground_holo_dark">@color/vpi__background_holo_light</color>
+    <color name="vpi__bright_foreground_holo_light">@color/vpi__background_holo_dark</color>
+    <color name="vpi__bright_foreground_disabled_holo_dark">#2e2e2e</color>
+    <color name="vpi__bright_foreground_disabled_holo_light">#ffb2b2b2</color>
+    <color name="vpi__bright_foreground_inverse_holo_dark">@color/vpi__bright_foreground_holo_light</color>
+    <color name="vpi__bright_foreground_inverse_holo_light">@color/vpi__bright_foreground_holo_dark</color>
+    <color name="every_exam_color">#8C8C8C</color>
+    <color name="integral_exchange_divider">#C0C0C0</color>
+    <color name="integral_exchange_divider2">#B2B2B2</color>
+    <color name="transparent2">#00000000</color>
+    <color name="menu_bg">#333333</color>
+    <color name="item_divider_bg">#CBCBCB</color>
+    <color name="province_line_border">#000000</color>
+    <color name="title_bg_x100">#FF2B36</color>
+
+    <color name="color_33000000">#33000000</color>
+
+</resources>
